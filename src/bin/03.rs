@@ -18,8 +18,8 @@ pub fn part_one(input: &str) -> Option<u64> {
         }
 
         match map.get(&curloc) {
-            Some(count) => { map.insert(curloc, count + 1); }
             None => { map.insert(curloc, 1); }
+            _ => {}
         }
     }
 
@@ -45,8 +45,8 @@ pub fn part_two(input: &str) -> Option<u64> {
         }
 
         match map.get(&curapplied) {
-            Some(count) => { map.insert(curapplied, count + 1); }
             None => { map.insert(curapplied, 1); }
+            _ => {}
         }
 
         if i % 2 == 0 {
